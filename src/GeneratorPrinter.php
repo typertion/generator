@@ -2,7 +2,7 @@
 
 namespace Typertion\Generator;
 
-use Nette\PhpGenerator\ClassType;
+use Nette\PhpGenerator\ClassLike;
 use Nette\PhpGenerator\Helpers;
 use Nette\PhpGenerator\PhpFile;
 use Nette\PhpGenerator\PhpNamespace;
@@ -36,7 +36,7 @@ final class GeneratorPrinter extends Printer
 			) . "\n";
 	}
 
-	public function printClass(ClassType $class, PhpNamespace $namespace = null): string
+	public function printClass(ClassLike $class, PhpNamespace $namespace = null): string
 	{
 		$lines = explode("\n", parent::printClass($class, $namespace));
 		foreach ($lines as $i => $line) {
